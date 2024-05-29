@@ -9,4 +9,8 @@ function hoverImage(galleryImage) {
 
 function selectImage(galleryImage) {
     largeImage.src = galleryImage.src;
+    for (i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].classList.remove("thumbUp");
+    }
+    galleryImage.classList.add("thumbUp");
 }
