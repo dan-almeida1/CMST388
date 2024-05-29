@@ -6,3 +6,7 @@ let thumbnails = document.querySelector("#thumbnails").children;
 function hoverImage(galleryImage) {
     caption.innerHTML = galleryImage.alt;
 }
+
+function selectImage(galleryImage) {
+    largeImage.src = galleryImage.src;
+}
