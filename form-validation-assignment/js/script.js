@@ -3,7 +3,7 @@ const lastName = document.getElementById('lastname');
 const address = document.getElementById('address');
 const form = document.getElementById('form');
 const errorElement = document.getElementById('error')
-
+//error sign
 form.addEventListener('submit', (e) => {
     let messages = []
     if (firstName.value === '' || firstName.value == null) {
@@ -16,3 +16,6 @@ form.addEventListener('submit', (e) => {
     }
     
 })
+
+//reset button
+form.addEventListener('reset', reset())
