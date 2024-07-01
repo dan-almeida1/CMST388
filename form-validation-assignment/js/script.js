@@ -10,7 +10,11 @@ const email = documents.getElementById('email');
 const errorElement = document.getElementById('error');
 //error sign
 form.addEventListener('submit', (e) => {
-    let messages = []
+    
+    e.preventDefault();
+
+    validateInputs();
+    /* let messages = []
     if (firstName.value === '' || firstName.value == null) {
         messages.push('Name is Required')
     }
@@ -18,9 +22,16 @@ form.addEventListener('submit', (e) => {
     if (messages.length > 0) {
         e.preventDefault()
         errorElement.innerText = messages.join(', ')
-    }
+    } */
     
 })
+
+const validateInputs = () => {
+    const firstNameValue = firstName.ariaValueMax.trim();
+    const lastNameValue = lastName.ariaValueMax.trim();
+    const addressValue = address.ariaValueMax.trim();
+    const cityValue = city.ariaValueMax.trim();
+};
 
 //reset button
 form.addEventListener('reset', reset())
