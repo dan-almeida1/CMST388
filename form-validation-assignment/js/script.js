@@ -1,7 +1,7 @@
+const form = document.getElementById('form');
 const firstName = document.getElementById('firstname');
 const lastName = document.getElementById('lastname');
 const address = document.getElementById('address');
-const form = document.getElementById('form');
 const errorElement = document.getElementById('error')
 //error sign
 form.addEventListener('submit', (e) => {
