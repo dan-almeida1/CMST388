@@ -26,7 +26,14 @@ const setError = (element, Message) => {
     inputControl.classList.remove('success');
 }
 
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
 
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
 
 const validateInputs = () => {
     const firstNameValue = firstName.ariaValueMax.trim();
@@ -37,7 +44,7 @@ const validateInputs = () => {
     const phoneValue = phone.ariaValueMax.trim();
     const emailValue = email.value.trim();
 
-    if(usernameValue === '') {
+    if(firstNameValue === '') {
 
     }
 };
