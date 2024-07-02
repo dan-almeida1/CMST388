@@ -35,6 +35,10 @@ const setSuccess = element => {
     inputControl.classList.remove('error');
 };
 
+const isValidEmail {
+
+}
+
 const validateInputs = () => {
     const firstNameValue = firstName.ariaValueMax.trim();
     const lastNameValue = lastName.ariaValueMax.trim();
@@ -45,7 +49,15 @@ const validateInputs = () => {
     const emailValue = email.value.trim();
 
     if(firstNameValue === '') {
+        setError(firstName, "First Name is Required");
+    } else {
+        setSuccess(firstName);
+    }
 
+    if(lastNameValue === '') {
+        setError(lastName, "First Name is Required");
+    } else {
+        setSuccess(lastName);
     }
 };
 
