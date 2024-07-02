@@ -23,7 +23,10 @@ const setError = (element, Message) => {
 
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
+    inputControl.classList.remove('success');
 }
+
+
 
 const validateInputs = () => {
     const firstNameValue = firstName.ariaValueMax.trim();
