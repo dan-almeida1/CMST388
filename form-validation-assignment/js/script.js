@@ -14,23 +14,28 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     validateInputs();
-    /* let messages = []
-    if (firstName.value === '' || firstName.value == null) {
-        messages.push('Name is Required')
-    }
-
-    if (messages.length > 0) {
-        e.preventDefault()
-        errorElement.innerText = messages.join(', ')
-    } */
     
-})
+});
+
+const setError = (element, Message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+}
 
 const validateInputs = () => {
     const firstNameValue = firstName.ariaValueMax.trim();
     const lastNameValue = lastName.ariaValueMax.trim();
     const addressValue = address.ariaValueMax.trim();
     const cityValue = city.ariaValueMax.trim();
+    const zipcodeValue = zipcode.ariaValueMax.trim();
+    const phoneValue = phone.ariaValueMax.trim();
+    const emailValue = email.value.trim();
+
+    if(usernameValue === '') {
+
+    }
 };
 
 //reset button
