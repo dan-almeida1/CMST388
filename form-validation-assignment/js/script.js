@@ -21,7 +21,7 @@ const setError = (element, Message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = message;
+    errorDisplay.innerText = Message;
     inputControl.classList.add('error');
     inputControl.classList.remove('success');
 }
@@ -33,10 +33,11 @@ const setSuccess = element => {
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
-};
+}
 
-const isValidEmail {
-
+const isValidEmail = email => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
 
 const validateInputs = () => {
@@ -55,7 +56,13 @@ const validateInputs = () => {
     }
 
     if(lastNameValue === '') {
-        setError(lastName, "First Name is Required");
+        setError(lastName, "Last Name is Required");
+    } else {
+        setSuccess(lastName);
+    }
+
+    if(addressValue === '') {
+        setError(address, "Address is Required");
     } else {
         setSuccess(lastName);
     }
