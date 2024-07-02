@@ -10,57 +10,14 @@ const email = documents.getElementById('email');
 const errorElement = document.getElementById('error');
 //error sign
 form.addEventListener('submit', (e) => {
+    let messages = []
     
     e.preventDefault();
 
-    validateInputs();
+    
     
 });
 
-const validateInputs = () => {
-    const firstNameValue = firstName.ariaValueMax.trim();
-    const lastNameValue = lastName.ariaValueMax.trim();
-    const addressValue = address.ariaValueMax.trim();
-    const cityValue = city.ariaValueMax.trim();
-    const zipcodeValue = zipcode.ariaValueMax.trim();
-    const phoneValue = phone.ariaValueMax.trim();
-    const emailValue = email.value.trim();
-
-    if(firstNameValue === '') {
-        setError(firstName, "First Name is Required");
-    } else {
-        setSuccess(firstName);
-    }
-
-    if(lastNameValue === '') {
-        setError(lastName, "Last Name is Required");
-    } else {
-        setSuccess(lastName);
-    }
-
-    if(addressValue === '') {
-        setError(address, "Address is Required");
-    } else {
-        setSuccess(lastName);
-    }
-};
-const setError = (element, Message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = Message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
-}
-
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-}
 
 const isValidEmail = email => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
