@@ -22,6 +22,7 @@ const setError = (element, Message) => {
     const errorDisplay = inputControl.querySelector('.error');
 
     errorDisplay.innerText = message;
+    inputControl.classList.add('error');
 }
 
 const validateInputs = () => {
