@@ -19,7 +19,16 @@ body {
 .input-control {
     display: flex;
     flex-direction: column;
+
     
+}
+
+.radio {
+    display: flex;
+}
+
+.check {
+    display: flex;
 }
 
 .input-control input {
