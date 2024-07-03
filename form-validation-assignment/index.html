@@ -4,16 +4,19 @@
         <meta charset="utf-8">
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script defer src="js/script.js"></script>
     </head>
+    <script defer src="js/script.js"></script>
     <body>
+        <span class="error" aria-live="polite"></span>
         <div class="container">
-            <div class="error"></div>
-            <form id="form" action="/" method="GET">
+            <form id="form" action="mailto:danalmeida025@gmail.com" method="POST" enctype="text/plain" onsubmit="return handleData()">
                 <h1>Registration Form</h1>
                 <div class="input-control">
                     <label for="firstname">First Name: </label>
                     <input type="text" id="firstname" placeholder="First Name"> 
+                    <div style="visibility:hidden; color:red; " id="firsterror">
+                        Please enter your First Name.
+                        </div>
                 </div>
                 <div class="input-control">
                     <label for="lastname">Last Name: </label>
@@ -100,8 +103,8 @@
                     <input type="email" id="email" placeholder="email@email.com" class="input-control">
                 </div>
                 <div class="input-control">
-                    <label for="email">Confirm Email: </label>
-                    <input type="email" id="email" placeholder="email@email.com" class="input-control">
+                    <label for="email2">Confirm Email: </label>
+                    <input type="email" id="email2" placeholder="email@email.com" class="input-control">
                 </div>
                 <div class="clicks">
                     <span>Meal Preference:</span>
@@ -121,7 +124,10 @@
                     </div>
                 </div>
                 <div class="clicks">
-                    <span>Contact Method:</span>
+                    <div>
+                        <span>Contact Method:</span> <br>
+                        <span>(Select Two)</span>
+                    </div>
                     <div class="input-control">
                         <div class="check">
                             <input type="checkbox" name="contact" id="contactphone">
@@ -139,6 +145,9 @@
                             <input type="checkbox" name="contact" id="linkedin">
                             <label for="linkedin">Linkedin</label>
                         </div>
+                        <div style="visibility:hidden; color:red; " id="chk_option_error">
+                            Please select at least one option.
+                            </div>
                     </div>
                 </div>
                 <div class="input-control">
