@@ -11,11 +11,17 @@ const errorElement = document.getElementById('error');
 //error sign
 form.addEventListener('submit', (e) => {
     let messages = []
+    if (firstName.value === "" || firstName.value == null) {
+        messages.push('First Name is Required')
+    }
     
-    e.preventDefault();
-
-    
-    
+    if (lastName.value === "" || lastName.value == null) {
+        messages.push('Last Name Name is Required')
+    }
+    if(messages.length > 0) {
+        e.preventDefault();
+    }
+  
 });
 
 
@@ -25,6 +31,6 @@ const isValidEmail = email => {
 }
 
 //reset button
-function myFunction() {
+function wipe() {
     document.getElementById("form").reset();
 }
