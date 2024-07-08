@@ -1,0 +1,54 @@
+body {
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+#form {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+#form h1{
+    text-align: center;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.clicks {
+    display: flex;
+}
+
+.radio {
+    display: flex;
+}
+
+.check {
+    display: flex;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+}
+
